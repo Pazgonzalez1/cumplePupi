@@ -215,39 +215,43 @@ body {
 /* Slide 1 Portada: Bigger image positioned lower right above title box */
 #slide-1 .character-wrapper {
   top: auto;
-  bottom: 380px;
+  bottom: 330px;
   right: -13px;
-  width: 98%;
-  max-width: 500px;
+  width: 92%;
+  max-width: 400px;
   z-index: 2;
 }
 
 .char-left {
-  top: 50px;
+  top: 40px;
   left: -15px;
-  width: 68%;
-  max-width: 290px;
+  width: 75%;
+  max-width: 320px;
 }
 
-/* Slide 2: Foto bajada y tamaño reducido */
+/* Slide 2: Foto posicionada arriba visible sobre la tarjeta (Coincide con captura) */
 #slide-2 .character-wrapper {
-  top: 150px;
-  width: 70%;
-  max-width: 240px;
+  top: 40px;
+  left: -15px;
+  width: 75%;
+  max-width: 320px;
 }
 
-/* Slide 3 Heart Hands: Positioned higher so the heart hands are clearly visible */
+/* Slide 3 Heart Hands: Posicionada arriba con manos de corazón visibles (Coincide con captura) */
 #slide-3 .character-wrapper {
-  top: 100px;
+  top: -10px;
   left: -10px;
   width: 88%;
-  max-width: 250px;
+  max-width: 360px;
   z-index: 2;
 }
 
-/* Slide 4: Foto bajada un poco */
+/* Slide 4: Foto posicionada arriba */
 #slide-4 .character-wrapper {
-  top: 110px;
+  top: 40px;
+  right: -15px;
+  width: 75%;
+  max-width: 310px;
 }
 
 .char-bottom {
