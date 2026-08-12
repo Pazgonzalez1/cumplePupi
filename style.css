@@ -186,92 +186,74 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 60px 16px 24px 16px;
+  padding: 50px 16px 16px 16px;
   overflow: hidden;
 }
 
-/* Base Image Positioning */
+/* Base Image Positioning - Area flexible superior */
 .character-wrapper {
   position: absolute;
-  z-index: 1;
+  top: 50px;
+  bottom: 230px;
+  left: 10px;
+  right: 10px;
+  z-index: 2;
   pointer-events: none;
+  display: flex;
+  align-items: flex-end;
 }
 
 .character-img {
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.7));
 }
 
-/* PDF Layout Specific Placements */
-.char-right {
-  top: 40px;
-  right: -20px;
-  width: 75%;
-  max-width: 320px;
-}
-
-/* Slide 1 Portada: Subida un poco más */
+/* Alineaciones especificas por slide */
 #slide-1 .character-wrapper {
-  top: auto;
-  bottom: 340px;
-  right: -10px;
-  width: 85%;
-  max-width: 350px;
-  z-index: 2;
+  justify-content: flex-end;
+  bottom: 260px;
 }
 
-.char-left {
-  top: 15px;
-  left: -15px;
-  width: 68%;
-  max-width: 280px;
-}
-
-/* Slide 2: Subida un poco y reducida solo un poco */
 #slide-2 .character-wrapper {
-  top: 15px;
-  left: -15px;
-  width: 68%;
-  max-width: 280px;
+  justify-content: flex-start;
+  bottom: 230px;
 }
 
-/* Slide 3 Heart Hands: Subida a top: -45px para liberar las manos de corazon */
 #slide-3 .character-wrapper {
-  top: -45px;
-  left: -10px;
-  width: 80%;
-  max-width: 320px;
-  z-index: 2;
+  justify-content: flex-start;
+  top: 35px;
+  bottom: 210px;
 }
 
-/* Slide 4: Foto posicionada arriba */
 #slide-4 .character-wrapper {
-  top: 40px;
-  right: -15px;
-  width: 75%;
-  max-width: 310px;
+  justify-content: flex-end;
+  bottom: 180px;
 }
 
 .char-bottom {
   position: relative;
   width: 100%;
   margin-top: 15px;
-  bottom: -10px;
+  bottom: 0;
 }
 
 .horizontal-img {
-  max-height: 180px;
+  max-height: 160px;
   object-fit: contain;
   margin: 0 auto;
   display: block;
 }
 
-/* Slide Content Cards */
+/* Slide Content Cards - Ancladas abajo siempre */
 .slide-content {
   position: relative;
   z-index: 10;
+  margin-top: auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
