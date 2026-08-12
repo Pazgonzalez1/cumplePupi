@@ -190,11 +190,11 @@ body {
   overflow: hidden;
 }
 
-/* Base Image Positioning - Area flexible superior */
+/* Base Image Positioning - Area flexible que nace detrás de la tarjeta */
 .character-wrapper {
   position: absolute;
-  top: 50px;
-  bottom: 230px;
+  top: 45px;
+  bottom: 90px; /* Se extiende hacia abajo detrás de la tarjeta para ocultar bordes cortados */
   left: 10px;
   right: 10px;
   z-index: 2;
@@ -212,45 +212,46 @@ body {
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.7));
 }
 
-/* Alineaciones especificas por slide */
+/* Alineaciones y tamaños especificos por slide */
 #slide-1 .character-wrapper {
   justify-content: flex-end;
-  bottom: 300px;
-  top: 35px;
+  bottom: 120px;
 }
 
 #slide-1 .character-img {
-  max-width: 82%;
+  max-width: 88%;
+  max-height: 85%;
 }
 
 #slide-2 .character-wrapper {
   justify-content: flex-start;
-  bottom: 230px;
-  top: 45px;
+  bottom: 90px;
 }
 
 #slide-2 .character-img {
-  max-width: 62%; /* Segunda foto achicada */
+  max-width: 72%;
+  max-height: 85%;
 }
 
 #slide-3 .character-wrapper {
   justify-content: flex-start;
-  top: 25px;
-  bottom: 210px;
+  bottom: 90px;
+  top: 35px;
 }
 
 #slide-3 .character-img {
-  max-width: 78%;
+  max-width: 80%;
+  max-height: 88%;
 }
 
 #slide-4 .character-wrapper {
   justify-content: flex-end;
-  bottom: 180px;
-  top: 40px;
+  bottom: 90px;
 }
 
 #slide-4 .character-img {
-  max-width: 70%;
+  max-width: 75%;
+  max-height: 85%;
 }
 
 .char-bottom {
