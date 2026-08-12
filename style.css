@@ -233,15 +233,18 @@ body {
   max-width: 82%;
 }
 
-/* Slide 3: Centrada en el medio y mas grande */
+/* Slide 3: Ocupa todo el ancho de borde a borde */
 #slide-3 .character-wrapper {
-  justify-content: center; /* Centrada en el medio */
-  top: 30px;
-  bottom: 230px;
+  justify-content: center;
+  top: 15px;
+  bottom: 220px;
+  left: 0;
+  right: 0;
 }
 
 #slide-3 .character-img {
-  max-width: 95%; /* Mas grande */
+  width: 100%;
+  max-width: 100%;
 }
 
 #slide-4 .character-wrapper {
