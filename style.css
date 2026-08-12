@@ -28,7 +28,8 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   background-color: var(--bg-dark-3);
@@ -135,12 +136,22 @@ html, body {
   animation: wave 0.8s ease-in-out infinite alternate;
 }
 
-.music-waves span:nth-child(2) { animation-delay: 0.2s; }
-.music-waves span:nth-child(3) { animation-delay: 0.4s; }
+.music-waves span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.music-waves span:nth-child(3) {
+  animation-delay: 0.4s;
+}
 
 @keyframes wave {
-  0% { height: 4px; }
-  100% { height: 14px; }
+  0% {
+    height: 4px;
+  }
+
+  100% {
+    height: 14px;
+  }
 }
 
 /* ==========================================================================
@@ -160,6 +171,7 @@ html, body {
 .invitation-slider::-webkit-scrollbar {
   display: none;
 }
+
 .invitation-slider {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -203,10 +215,10 @@ html, body {
 /* Slide 1 Portada: Bigger image positioned lower right above title box */
 #slide-1 .character-wrapper {
   top: auto;
-  bottom: 325px;
-  right: -15px;
-  width: 92%;
-  max-width: 400px;
+  bottom: 380px;
+  right: -13px;
+  width: 98%;
+  max-width: 500px;
   z-index: 2;
 }
 
@@ -217,13 +229,25 @@ html, body {
   max-width: 290px;
 }
 
+/* Slide 2: Foto bajada y tamaño reducido */
+#slide-2 .character-wrapper {
+  top: 150px;
+  width: 70%;
+  max-width: 240px;
+}
+
 /* Slide 3 Heart Hands: Positioned higher so the heart hands are clearly visible */
 #slide-3 .character-wrapper {
-  top: -10px;
+  top: 100px;
   left: -10px;
   width: 88%;
-  max-width: 370px;
+  max-width: 250px;
   z-index: 2;
+}
+
+/* Slide 4: Foto bajada un poco */
+#slide-4 .character-wrapper {
+  top: 110px;
 }
 
 .char-bottom {
@@ -261,7 +285,8 @@ html, body {
 }
 
 /* Typography & Headings */
-.tag-badge, .section-badge {
+.tag-badge,
+.section-badge {
   font-family: var(--font-head);
   font-size: 0.72rem;
   font-weight: 800;
@@ -363,8 +388,15 @@ html, body {
 }
 
 @keyframes bounceDown {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(5px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
 }
 
 /* ==========================================================================
@@ -387,8 +419,13 @@ html, body {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.gold-border { border-color: rgba(255, 183, 3, 0.4); }
-.red-border { border-color: rgba(230, 36, 41, 0.4); }
+.gold-border {
+  border-color: rgba(255, 183, 3, 0.4);
+}
+
+.red-border {
+  border-color: rgba(230, 36, 41, 0.4);
+}
 
 .highlight-card {
   background: linear-gradient(90deg, rgba(230, 36, 41, 0.3) 0%, rgba(255, 183, 3, 0.15) 100%);
@@ -447,7 +484,9 @@ html, body {
   margin-bottom: 4px;
 }
 
-.rule-icon { font-size: 1.1rem; }
+.rule-icon {
+  font-size: 1.1rem;
+}
 
 .rule-title {
   font-size: 0.72rem;
@@ -536,8 +575,15 @@ html, body {
 }
 
 @keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 15px rgba(16, 185, 129, 0.4); }
-  50% { box-shadow: 0 0 30px rgba(16, 185, 129, 0.8); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.8);
+  }
 }
 
 /* ==========================================================================
@@ -683,7 +729,8 @@ html, body {
   color: var(--accent-gold);
 }
 
-.form-group input, .form-group select {
+.form-group input,
+.form-group select {
   width: 100%;
   padding: 12px 14px;
   border-radius: 12px;
@@ -709,39 +756,4 @@ html, body {
 
 .text-center {
   text-align: center;
-}
-
-/* Customizer styles */
-.customizer-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 14px;
-  text-align: left;
-}
-
-.photo-input-item {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.photo-input-item span {
-  font-size: 0.75rem;
-  color: var(--accent-gold);
-}
-
-.photo-file-input {
-  font-size: 0.75rem;
-  color: #ffffff;
-}
-
-.customizer-info-note {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  background: rgba(0,0,0,0.3);
-  padding: 10px;
-  border-radius: 10px;
-  border-left: 3px solid var(--accent-gold);
-  text-align: left;
 }

@@ -13,14 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Modal Elements
   const modalNo = document.getElementById('modal-no');
-  const modalCustomizer = document.getElementById('modal-customizer');
   
   const btnSiVoy = document.getElementById('btn-si-voy');
   const btnNoVoy = document.getElementById('btn-no-voy');
   const closeModalNo = document.getElementById('close-modal-no');
   const closeBtnNoAck = document.getElementById('close-btn-no-ack');
-  const closeCustomizer = document.getElementById('close-customizer');
-  const customizerToggle = document.getElementById('customizer-toggle');
 
   const btnAddCalendar = document.getElementById('btn-add-calendar');
   const btnShareInvite = document.getElementById('btn-share-invite');
@@ -189,34 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* ==========================================================================
-     5. CUSTOMIZER PHOTO SWAPPER
-     ========================================================================== */
-  customizerToggle.addEventListener('click', () => {
-    modalCustomizer.classList.add('active');
-  });
 
-  closeCustomizer.addEventListener('click', () => {
-    modalCustomizer.classList.remove('active');
-  });
-
-  const photoInputs = document.querySelectorAll('.photo-file-input');
-  photoInputs.forEach(input => {
-    input.addEventListener('change', (e) => {
-      const file = e.target.files[0];
-      const slotNum = e.target.getAttribute('data-target');
-      if (file && slotNum) {
-        const reader = new FileReader();
-        reader.onload = (event) => {
-          const imgSlot = document.getElementById(`img-slot-${slotNum}`);
-          if (imgSlot) {
-            imgSlot.src = event.target.result;
-          }
-        };
-        reader.readAsDataURL(file);
-      }
-    });
-  });
 
   /* ==========================================================================
      6. IMAGE FALLBACK HANDLER (.jpeg, .png, .jpg)
