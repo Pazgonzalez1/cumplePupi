@@ -1,4 +1,5 @@
 import confetti from 'canvas-confetti';
+import musicUrl from './assets/cancion.mp3';
 
 // ==========================================================================
 // CONFIGURACIÓN: Poné tu número de WhatsApp aquí (con código de país, ej: "5491112345678")
@@ -194,6 +195,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const musicBtn = document.getElementById('music-btn');
   const bgMusic = document.getElementById('bg-music');
   const musicIcon = musicBtn ? musicBtn.querySelector('.music-icon') : null;
+
+  if (bgMusic && musicUrl) {
+    bgMusic.src = musicUrl;
+  }
 
   if (musicBtn && bgMusic) {
     musicBtn.addEventListener('click', (e) => {
