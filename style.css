@@ -212,10 +212,10 @@ body {
   max-width: 320px;
 }
 
-/* Slide 1 Portada: Subida un poco y reducida solo un poco */
+/* Slide 1 Portada: Subida un poco más */
 #slide-1 .character-wrapper {
   top: auto;
-  bottom: 300px;
+  bottom: 340px;
   right: -10px;
   width: 85%;
   max-width: 350px;
