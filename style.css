@@ -215,23 +215,42 @@ body {
 /* Alineaciones especificas por slide */
 #slide-1 .character-wrapper {
   justify-content: flex-end;
-  bottom: 260px;
+  bottom: 300px;
+  top: 35px;
+}
+
+#slide-1 .character-img {
+  max-width: 82%;
 }
 
 #slide-2 .character-wrapper {
   justify-content: flex-start;
   bottom: 230px;
+  top: 45px;
+}
+
+#slide-2 .character-img {
+  max-width: 62%; /* Segunda foto achicada */
 }
 
 #slide-3 .character-wrapper {
   justify-content: flex-start;
-  top: 35px;
+  top: 25px;
   bottom: 210px;
+}
+
+#slide-3 .character-img {
+  max-width: 78%;
 }
 
 #slide-4 .character-wrapper {
   justify-content: flex-end;
   bottom: 180px;
+  top: 40px;
+}
+
+#slide-4 .character-img {
+  max-width: 70%;
 }
 
 .char-bottom {
