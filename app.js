@@ -189,8 +189,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ==========================================================================
-     6. IMAGE FALLBACK HANDLER (.jpeg, .png, .jpg)
+     5. BACKGROUND MUSIC PLAYER (Play ▶ / Pause ⏸)
      ========================================================================== */
+  const musicBtn = document.getElementById('music-btn');
+  const bgMusic = document.getElementById('bg-music');
+  const musicIcon = musicBtn ? musicBtn.querySelector('.music-icon') : null;
+
+  if (musicBtn && bgMusic) {
+    musicBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (bgMusic.paused) {
+        bgMusic.play().then(() => {
+          musicBtn.classList.add('playing');
+          if (musicIcon) musicIcon.innerText = '⏸';
+        }).catch(err => {
+          console.error("Audio playback error:", err);
+        });
+      } else {
+        bgMusic.pause();
+        musicBtn.classList.remove('playing');
+        if (musicIcon) musicIcon.innerText = '▶';
+      }
+    });
+
+    // Reproducción automática al tocar la pantalla por primera vez
+    const startAudioOnFirstTouch = () => {
+      if (bgMusic.paused) {
+        bgMusic.play().then(() => {
+          musicBtn.classList.add('playing');
+          if (musicIcon) musicIcon.innerText = '⏸';
+        }).catch(() => {});
+      }
+      document.removeEventListener('click', startAudioOnFirstTouch);
+      document.removeEventListener('touchstart', startAudioOnFirstTouch);
+    };
+
+    document.addEventListener('click', startAudioOnFirstTouch, { once: true });
+    document.addEventListener('touchstart', startAudioOnFirstTouch, { once: true });
+  }
   document.querySelectorAll('.character-img').forEach(img => {
     img.addEventListener('error', function errorHandler() {
       const src = this.src;
